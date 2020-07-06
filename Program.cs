@@ -8,10 +8,14 @@ namespace rockpaperscissors
         static void Main(string[] args)
         {
             Console.Clear();
+            Console.WriteLine();
             Console.WriteLine("Greetings Traveller");
+            Console.WriteLine("----------------------------------------");
             Console.WriteLine("What is your name?");
+            Console.WriteLine("----------------------------------------");
             string name = Console.ReadLine();
             bool playing = false;
+            Console.WriteLine("----------------------------------------");
             Console.WriteLine($"{name} , would you like to play a game?(y/n)");
             var wins = 0;
             var losses = 0;
@@ -19,6 +23,8 @@ namespace rockpaperscissors
             {
             char choice = Console.ReadKey().KeyChar;
             // playing = true;
+            Console.BackgroundColor = ConsoleColor.DarkGray;
+            Console.ForegroundColor = ConsoleColor.Black;
 
             string[] choices = { "rock", "paper", "scissors"};
              
@@ -28,8 +34,11 @@ namespace rockpaperscissors
             {
             Console.Clear();
             Console.WriteLine("\nYou have chosen to play me in 'rock paper scissors'. Foolish move.");
+            Console.WriteLine("----------------------------------------");
             Console.WriteLine($"Wins: {wins}   Losses: {losses}");
+            Console.WriteLine("----------------------------------------");
             Console.WriteLine("Make your Choice");
+            Console.WriteLine("----------------------------------------");
             Console.WriteLine(@"
             _______
         ---'   ____)
@@ -60,12 +69,18 @@ namespace rockpaperscissors
                 {
                     Console.Clear();
                     losses += 1;
+                    Console.WriteLine("");
                     Console.WriteLine("You thought a rock could defeat me?");
+                    Console.WriteLine("----------------------------------------");
                     Console.WriteLine($"I chose {choices[index]}");
-                    Console.WriteLine("Go home kid.  This is a Warrior's game."
-                    );
+                    Console.WriteLine("----------------------------------------");
+                    Console.WriteLine("Go home kid.  This is a Warrior's game.");
+                    Console.WriteLine("----------------------------------------");
+                    
                     Console.WriteLine($"Wins: {wins}   Losses: {losses}");
+                    Console.WriteLine("----------------------------------------");
                     Console.WriteLine("Do you want to play again? (y/n)");
+                    Console.WriteLine("----------------------------------------");
                     
                     
                 }
@@ -73,73 +88,107 @@ namespace rockpaperscissors
                 {
                     Console.Clear();
                     wins += 1;
+                    Console.WriteLine("");
                     Console.WriteLine($"I chose {choices[index]}");
+                    Console.WriteLine("----------------------------------------");
                     Console.WriteLine("I can't believe I have been beaten by you! I have to move far away because of my shame.");
+                    Console.WriteLine("----------------------------------------");
                     Console.WriteLine($"Wins: {wins}   Losses: {losses}");
+                    Console.WriteLine("----------------------------------------");
                     Console.WriteLine("Do you want to play again? (y/n)");
+                    Console.WriteLine("----------------------------------------");
                 }
 
                 else if(playerChoice == "paper" && index == 0)
                 {
                    Console.Clear();
                    wins += 1;
+                   Console.WriteLine("");
                    Console.WriteLine($"I chose {choices[index]}");
+                   Console.WriteLine("----------------------------------------");
                    Console.WriteLine("You filthy swine! You won this one!"); 
+                   Console.WriteLine("----------------------------------------");
                    Console.WriteLine("Do you want to play again? (y/n)");
+                   Console.WriteLine("----------------------------------------");
                 }
 
                 else if (playerChoice == "paper" && index == 2)
                 {
                     Console.Clear();
                     losses += 1;
+                    Console.WriteLine("");
                     Console.WriteLine($"I chose {choices[index]}");
+                    Console.WriteLine("----------------------------------------");
                     Console.WriteLine("You just weren't meant to play this game.");
+                    Console.WriteLine("----------------------------------------");
                     Console.WriteLine("Do you want to play again? (y/n)");
+                    Console.WriteLine("----------------------------------------");
                 }
 
                 else if (playerChoice == "scissors" && index == 0)
                 {
                     Console.Clear();
                     losses += 1;
+                    Console.WriteLine("");
                     Console.WriteLine($"I chose {choices[index]}");
+                    Console.WriteLine("----------------------------------------");
                     Console.WriteLine("My rock has smashed your scissors. You Lose.");
+                    Console.WriteLine("----------------------------------------");
                     Console.WriteLine("Do you want to play again? (y/n)");
+                    Console.WriteLine("----------------------------------------");
                 }
 
                  else if (playerChoice == "scissors" && index == 1)
                 {
                     Console.Clear();
                     wins += 1;
+                    Console.WriteLine("");
                     Console.WriteLine($"I chose {choices[index]}");
+                    Console.WriteLine("----------------------------------------");
                     Console.WriteLine("I have never lost to such a weakling.  Its about time I retire.");
+                    Console.WriteLine("----------------------------------------");
                     Console.WriteLine("Do you want to play again? (y/n)");
+                    Console.WriteLine("----------------------------------------");
                 }
                 
                 else if (playerChoice == "rock" && index == 0)
                 {
                     Console.Clear();
+                    Console.WriteLine("");
                     Console.WriteLine("We tied! It seems we are evenly Matched! Lets go again!");
+                    Console.WriteLine("----------------------------------------");
                     Console.WriteLine("Do you want to play again? (y/n)");     
+                    Console.WriteLine("----------------------------------------");
                 }
                 
                 else if (playerChoice == "paper" && index == 1)
                 {
                     Console.Clear();
+                    Console.WriteLine("");
                     Console.WriteLine("We tied! It seems we are evenly Matched! Lets go again!");
+                    Console.WriteLine("----------------------------------------");
                     Console.WriteLine("Do you want to play again? (y/n)");     
+                    Console.WriteLine("----------------------------------------");
                 }
 
                 else if (playerChoice == "scissors" && index == 2)
                 {
                     Console.Clear();
+                    Console.WriteLine("");
                     Console.WriteLine("We tied! It seems we are evenly Matched! Lets go again!");
+                    Console.WriteLine("----------------------------------------");
                     Console.WriteLine("Do you want to play again? (y/n)");     
+                    Console.WriteLine("----------------------------------------");
                 }
+               
                 else
                 {
                     Console.Clear();
-                    Console.WriteLine("That is not a move.")
-                    Console.WriteLine("Do you want to play or not? (y/n)");                
+                    Console.WriteLine("");
+                    Console.WriteLine("That is not a move.");
+                    Console.WriteLine("----------------------------------------");
+                    Console.WriteLine("Do you want to play or not? (y/n)");       
+                    Console.WriteLine("----------------------------------------");         
                 };
             }
 
@@ -147,11 +196,13 @@ namespace rockpaperscissors
             {
             playing = true;
             Console.WriteLine("\nYou coward.");
+            Console.WriteLine("----------------------------------------");
             }
 
             else 
             {
             Console.WriteLine("\nChoose yes or no");
+            Console.WriteLine("----------------------------------------");
             }
             }
         }
