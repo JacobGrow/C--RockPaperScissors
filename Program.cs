@@ -7,26 +7,26 @@ namespace rockpaperscissors
     {
         static void Main(string[] args)
         {
-           
+            Console.Clear();
             Console.WriteLine("Greetings Traveller");
             Console.WriteLine("What is your name?");
             string name = Console.ReadLine();
-            bool playing = true;
+            bool playing = false;
             Console.WriteLine($"{name} , would you like to play a game?(y/n)");
-            while(playing)
+            var wins = 0;
+            var losses = 0;
+            while(!playing)
             {
             char choice = Console.ReadKey().KeyChar;
-            // playing = false;
+            // playing = true;
 
             string[] choices = { "rock", "paper", "scissors"};
              
             Random rand = new Random();
-            var wins = 0;
-            var losses = 0;
 
             if (choice == 'y')
             {
-            
+            Console.Clear();
             Console.WriteLine("\nYou have chosen to play me in 'rock paper scissors'. Foolish move.");
             Console.WriteLine($"Wins: {wins}   Losses: {losses}");
             Console.WriteLine("Make your Choice");
@@ -58,6 +58,7 @@ namespace rockpaperscissors
 
                 if(playerChoice == "rock" && index == 1)
                 {
+                    Console.Clear();
                     losses += 1;
                     Console.WriteLine("You thought a rock could defeat me?");
                     Console.WriteLine($"I chose {choices[index]}");
@@ -89,6 +90,7 @@ namespace rockpaperscissors
 
                 else if (playerChoice == "paper" && index == 2)
                 {
+                    Console.Clear();
                     losses += 1;
                     Console.WriteLine($"I chose {choices[index]}");
                     Console.WriteLine("You just weren't meant to play this game.");
@@ -97,6 +99,7 @@ namespace rockpaperscissors
 
                 else if (playerChoice == "scissors" && index == 0)
                 {
+                    Console.Clear();
                     losses += 1;
                     Console.WriteLine($"I chose {choices[index]}");
                     Console.WriteLine("My rock has smashed your scissors. You Lose.");
@@ -105,6 +108,7 @@ namespace rockpaperscissors
 
                  else if (playerChoice == "scissors" && index == 1)
                 {
+                    Console.Clear();
                     wins += 1;
                     Console.WriteLine($"I chose {choices[index]}");
                     Console.WriteLine("I have never lost to such a weakling.  Its about time I retire.");
@@ -113,6 +117,7 @@ namespace rockpaperscissors
                 
                 else
                 {
+                    Console.Clear();
                     Console.WriteLine("We tied! It seems we are evenly Matched! Lets go again!");
                     Console.WriteLine("Do you want to play again? (y/n)");                
                 };
