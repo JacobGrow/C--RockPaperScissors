@@ -115,18 +115,38 @@ namespace rockpaperscissors
                     Console.WriteLine("Do you want to play again? (y/n)");
                 }
                 
-                else
+                else if (playerChoice == "rock" && index == 0)
                 {
                     Console.Clear();
                     Console.WriteLine("We tied! It seems we are evenly Matched! Lets go again!");
-                    Console.WriteLine("Do you want to play again? (y/n)");                
+                    Console.WriteLine("Do you want to play again? (y/n)");     
+                }
+                
+                else if (playerChoice == "paper" && index == 1)
+                {
+                    Console.Clear();
+                    Console.WriteLine("We tied! It seems we are evenly Matched! Lets go again!");
+                    Console.WriteLine("Do you want to play again? (y/n)");     
+                }
+
+                else if (playerChoice == "scissors" && index == 2)
+                {
+                    Console.Clear();
+                    Console.WriteLine("We tied! It seems we are evenly Matched! Lets go again!");
+                    Console.WriteLine("Do you want to play again? (y/n)");     
+                }
+                else
+                {
+                    Console.Clear();
+                    Console.WriteLine("That is not a move.")
+                    Console.WriteLine("Do you want to play or not? (y/n)");                
                 };
             }
 
             else if(choice == 'n')
             {
+            playing = true;
             Console.WriteLine("\nYou coward.");
-            playing = false;
             }
 
             else 
